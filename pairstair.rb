@@ -28,6 +28,17 @@ class Pairstair < Formula
   end
 
   def install
-    bin.install "pairstair"
+    arch = if OS.mac?
+      Hardware::CPU.arm? ? "darwin-arm64" : "darwin-amd64"
+    elsif OS.linux?
+      Hardware::CPU.arm? ? "linux-arm64" : "linux-amd64"
+    elsif OS.windows?
+      Hardware::CPU.arm? ? "windows-arm64.exe" : "windows-amd64.exe"
+    end
+
+    bin_name = "pairstair"
+    bin_name += ".exe" if OS.windows?
+    mv "pairstair-#{arch}", bin_name if File.exist?("pairstair-#{arch}")
+    bin.install bin_name
   end
 end
