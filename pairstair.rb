@@ -1,4 +1,4 @@
-class PairStair < Formula
+class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
   version "0.3.6"
