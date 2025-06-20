@@ -35,7 +35,6 @@ class Pairstair < Formula
     end
 
     bin_name = "pairstair"
-    bin_name += ".exe" if OS.windows?
     mv "pairstair-#{arch}", bin_name if File.exist?("pairstair-#{arch}")
     bin.install bin_name
   end
