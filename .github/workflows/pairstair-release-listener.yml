@@ -1,0 +1,46 @@
+name: Listen for Pairstair Releases
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run every hour to check for new releases
+    - cron: '0 * * * *'
+
+jobs:
+  check-for-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for new releases
+        id: check_release
+        run: |
+          # Get the latest release from pairstair repository
+          LATEST_RELEASE=$(curl -s https://api.github.com/repos/gypsydave5/pairstair/releases/latest)
+          LATEST_TAG=$(echo $LATEST_RELEASE | jq -r .tag_name)
+          LATEST_VERSION=${LATEST_TAG#v}
+          
+          echo "Latest release tag: $LATEST_TAG"
+          echo "VERSION=$LATEST_VERSION" >> $GITHUB_ENV
+          
+          # Store in output
+          echo "version=$LATEST_VERSION" >> $GITHUB_OUTPUT
+          echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
+
+      - name: Checkout code
+        if: steps.check_release.outputs.version != ''
+        uses: actions/checkout@v3
+
+      - name: Read current version
+        if: steps.check_release.outputs.version != ''
+        id: current_version
+        run: |
+          CURRENT_VERSION=$(grep -m 1 'version' pairstair.rb | cut -d'"' -f2)
+          echo "Current version in formula: $CURRENT_VERSION"
+          echo "current=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Trigger update workflow
+        if: steps.check_release.outputs.version != '' && steps.check_release.outputs.version != steps.current_version.outputs.current
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+          event-type: pairstair-release
+          client-payload: '{"version": "${{ steps.check_release.outputs.version }}"}'

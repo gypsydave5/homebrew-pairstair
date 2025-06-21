@@ -1,0 +1,48 @@
+name: Update Formula on New Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to update to (without v prefix)'
+        required: true
+  repository_dispatch:
+    types: [pairstair-release]
+
+jobs:
+  update-formula:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true
+
+      - name: Get version from dispatch
+        if: github.event_name == 'repository_dispatch'
+        run: echo "VERSION=${github.event.client_payload.version}" >> $GITHUB_ENV
+
+      - name: Get version from input
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+
+      - name: Update formula
+        run: ruby update_formula.rb $VERSION
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Commit and push changes
+        run: |
+          git add pairstair.rb
+          git commit -m "Update formula to version $VERSION"
+          git push
