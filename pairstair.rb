@@ -27,6 +27,11 @@ class Pairstair < Formula
     end
   end
 
+  resource "man" do
+    url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.7/pairstair.1"
+    sha256 "057578355a5be3bd0b051660f0181ee2c7739a88a05ecf62d928fcc8daf391b9"
+  end
+
   def install
     arch = if OS.mac?
       Hardware::CPU.arm? ? "darwin-arm64" : "darwin-amd64"
@@ -37,5 +42,8 @@ class Pairstair < Formula
     bin_name = "pairstair"
     mv "pairstair-#{arch}", bin_name if File.exist?("pairstair-#{arch}")
     bin.install bin_name
+
+    # Install man page
+    man1.install resource("man")
   end
 end
