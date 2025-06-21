@@ -1,29 +1,29 @@
 class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
-  version "0.3.6"
+  version "0.3.7"
 
   on_macos do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.6/pairstair-darwin-arm64"
-      sha256 "17dfe4271e1d3fea760f0c83a995e5c7baded17dc7be1b1d0d5c2a35ac71d4a8"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.7/pairstair-darwin-arm64"
+      sha256 "da34751e806d3c04a57d45671667b6fcce1a4e88747eeb48793ae75347ab2f25"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.6/pairstair-darwin-amd64"
-      sha256 "d25f403f38d8ea3859ddc3c62e54824f9bd9088e6a75cb047f25b5805bdeb0f7"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.7/pairstair-darwin-amd64"
+      sha256 "3c66a83577758f081aca7a308ff51e0486ec03637c2f95fd4f3dc90b4e8ff374"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.6/pairstair-linux-arm64"
-      sha256 "e9478119ed83988afc5d6c213e1148866a21d52bb474d2145754a163c8c97b6c"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.7/pairstair-linux-arm64"
+      sha256 "20f39108bcf9eebfddbee9da135034631182db060ae08fe51179e66474de22df"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.6/pairstair-linux-amd64"
-      sha256 "d7d47bb43198a96358c0de9abe4fba173208bf76b9dcd6881c4d9375ecfbeca8"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.7/pairstair-linux-amd64"
+      sha256 "2333c9f27ab77c9347bb2e1fedf298ce0b5a025948b6f043a4b9af2ba4bc7688"
     end
   end
 
