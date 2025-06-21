@@ -1,7 +1,7 @@
 class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
-  version "v0.3.13"
+  version "0.3.13"
 
   on_macos do
     on_arm do
