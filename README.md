@@ -1,13 +1,31 @@
-# homebrew-pairstair
+# Homebrew Pairstair
 
-# pairstair Homebrew Formula
+Homebrew tap for installing [pairstair](https://github.com/gypsydave5/pairstair).
 
-## Homebrew Formula Architecture Support
+## Installation
 
-The Homebrew formula for `pairstair` now supports multiple platforms and CPU architectures:
+```
+brew install gypsydave5/pairstair/pairstair
+```
 
-- macOS (Intel and Apple Silicon)
-- Linux (Intel and ARM64)
+## GitHub Actions Workflows
 
-During installation, the formula automatically downloads the correct binary for your platform and architecture, renames it to `pairstair`, and installs it into Homebrew's `bin` directory.  
-You do not need to manually rename or move any files.
+This repository contains two GitHub Actions workflows that automatically update the formula when new releases of pairstair are published:
+
+1. **Listen for Pairstair Releases**: Checks for new releases on the pairstair repository hourly
+2. **Update Formula on New Release**: Updates the formula with new versions
+
+### Manual Update
+
+You can manually trigger an update by going to the Actions tab, selecting "Update Formula on New Release", and providing the version number (without the 'v' prefix).
+
+### Permissions
+
+For these workflows to function properly, you need to enable Actions write permissions:
+
+1. Go to your repository's Settings
+2. Navigate to Actions > General
+3. Under "Workflow permissions", select "Read and write permissions"
+4. Click "Save"
+
+This allows the GitHub Actions to commit and push changes to the repository.

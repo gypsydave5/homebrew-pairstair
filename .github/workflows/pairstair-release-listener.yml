@@ -41,6 +41,7 @@ jobs:
         if: steps.check_release.outputs.version != '' && steps.check_release.outputs.version != steps.current_version.outputs.current
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+          # Use the built-in GITHUB_TOKEN instead
+          token: ${{ secrets.GITHUB_TOKEN }}
           event-type: pairstair-release
           client-payload: '{"version": "${{ steps.check_release.outputs.version }}"}'
