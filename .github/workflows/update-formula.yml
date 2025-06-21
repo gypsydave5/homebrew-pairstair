@@ -28,7 +28,7 @@ jobs:
 
       - name: Get version from dispatch
         if: github.event_name == 'repository_dispatch'
-        run: echo "VERSION=${github.event.client_payload.version}" >> $GITHUB_ENV
+        run: echo "VERSION=${{ github.event.client_payload.version }}" >> $GITHUB_ENV
 
       - name: Get version from input
         if: github.event_name == 'workflow_dispatch'
