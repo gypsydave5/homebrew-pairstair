@@ -8,20 +8,19 @@ Homebrew tap for installing [pairstair](https://github.com/gypsydave5/pairstair)
 brew install gypsydave5/pairstair/pairstair
 ```
 
-## GitHub Actions Workflows
+## GitHub Actions Workflow
 
-This repository contains two GitHub Actions workflows that automatically update the formula when new releases of pairstair are published:
+This repository contains a GitHub Actions workflow that can update the formula when new releases of pairstair are published:
 
-1. **Listen for Pairstair Releases**: Checks for new releases on the pairstair repository hourly
-2. **Update Formula on New Release**: Updates the formula with new versions
+**Update Formula on New Release**: Updates the formula with new versions when manually triggered
 
 ### Manual Update
 
-You can manually trigger an update by going to the Actions tab, selecting "Update Formula on New Release", and providing the version number (without the 'v' prefix).
+You can trigger an update by going to the Actions tab, selecting "Update Formula on New Release", and providing the version number (without the 'v' prefix).
 
 ### Permissions
 
-For these workflows to function properly, you need to enable Actions write permissions:
+For this workflow to function properly, you need to enable Actions write permissions:
 
 1. Go to your repository's Settings
 2. Navigate to Actions > General
