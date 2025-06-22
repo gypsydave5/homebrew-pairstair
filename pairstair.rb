@@ -1,35 +1,35 @@
 class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
-  version "0.3.15"
+  version "0.3.16"
 
   on_macos do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.15/pairstair-darwin-arm64"
-      sha256 "0d3c0bc1de5a5438d859cf0fd71c07ba2e735c275df5834c6dfc9c0a3da5a49d"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.16/pairstair-darwin-arm64"
+      sha256 "89472f61c3ad8ab381eb91139b84a45257cdc2b1a7b0b1fdc10573bd8eb63bc2"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.15/pairstair-darwin-amd64"
-      sha256 "04e095b7e212f2d13bdf21eac95bbaa22d7c70c320e2e962a436a86711930317"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.16/pairstair-darwin-amd64"
+      sha256 "31fb6eb688f1433243eaeba9b9a0b91fd40cd1366b6c216ec1a058507214a0fd"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.15/pairstair-linux-arm64"
-      sha256 "8d1530fd485999894a545798740cb56a601ed8a8f0097dfeeb84e667388490ff"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.16/pairstair-linux-arm64"
+      sha256 "67fa9f7ec391c6239c067c1e61882b5c19508005f8789457e6d1b97f40f5cd6f"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.15/pairstair-linux-amd64"
-      sha256 "3e127ac0d61d42acfcb72dfd685a0430eab8680e25b2c1913d59d344273b9812"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.16/pairstair-linux-amd64"
+      sha256 "848d51b5143b9dde1675795f41ae17fc49aa2c995cee1a05a23c9391d25df6cb"
     end
   end
 
   resource "man" do
-    url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.15/pairstair.1"
-    sha256 "057578355a5be3bd0b051660f0181ee2c7739a88a05ecf62d928fcc8daf391b9"
+    url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.16/pairstair.1"
+    sha256 "98d13e845703952c238e1db3ec14fcd18de7f4acecbff982665bdaf6853f3184"
   end
 
   def install
