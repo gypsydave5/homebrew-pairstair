@@ -1,35 +1,35 @@
 class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-darwin-arm64"
-      sha256 "0a05bc62c30ef96eddc378c40939fe3ee4dceb3e493349cc1de8a0ea326377ea"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.1/pairstair-darwin-arm64"
+      sha256 "eb0ec0adb74bbf652180aec8df857ac6d7b2af331281e91f93cbc3f72c6b123d"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-darwin-amd64"
-      sha256 "9f099494b5159a62d2a8187b2f4c0eb1633f6d8f73b74ba72bfb744a9d31efe5"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.1/pairstair-darwin-amd64"
+      sha256 "fc958c1f32129d74e092598c4ff1ca49d57f69bba767ddf2ceb65ecab4291b85"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-linux-arm64"
-      sha256 "857b10b3f0c4125bf9d201142a1b7fdb15b350e24e0d231bde8e9bb0fa1c16c6"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.1/pairstair-linux-arm64"
+      sha256 "7d1bb252e3376aa91336f85ef0032174d58387168035f8bcd4de3de6b3551a55"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-linux-amd64"
-      sha256 "fe68d40f6040e40f1a86c34a351bbeab5bffb71ce464c0778a06f104b6a03093"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.1/pairstair-linux-amd64"
+      sha256 "eb1eb155b08d1b8dacc9554cbebf2de650473bc2d2a8ecf1e4b02a32ed49bc74"
     end
   end
 
   resource "man" do
-    url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair.1"
-    sha256 "98d13e845703952c238e1db3ec14fcd18de7f4acecbff982665bdaf6853f3184"
+    url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.1/pairstair.1"
+    sha256 "4fa16ec50f6382ff70c2a234f614201c00d06fecc30e888b114d59733cd51abd"
   end
 
   def install
