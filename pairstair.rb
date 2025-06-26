@@ -1,34 +1,34 @@
 class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
-  version "0.3.19"
+  version "0.4.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.19/pairstair-darwin-arm64"
-      sha256 "2a77b45d9bc07f97239ec70bf5aa584cd738e542f705130b5221eb21bde6591a"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-darwin-arm64"
+      sha256 "0a05bc62c30ef96eddc378c40939fe3ee4dceb3e493349cc1de8a0ea326377ea"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.19/pairstair-darwin-amd64"
-      sha256 "33ac65662074815116c0405168f8130bd13bbe11cd6929a7674414ac19424e61"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-darwin-amd64"
+      sha256 "9f099494b5159a62d2a8187b2f4c0eb1633f6d8f73b74ba72bfb744a9d31efe5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.19/pairstair-linux-arm64"
-      sha256 "8fb107a6fdba08691eea3dec90a1e3aaeb9da941ae8343eab15664e249bb0464"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-linux-arm64"
+      sha256 "857b10b3f0c4125bf9d201142a1b7fdb15b350e24e0d231bde8e9bb0fa1c16c6"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.19/pairstair-linux-amd64"
-      sha256 "f3cd1bc37a6590c59d0b01c09d15b52cdec4e8530482c9965e0b5e1de9f25e14"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair-linux-amd64"
+      sha256 "fe68d40f6040e40f1a86c34a351bbeab5bffb71ce464c0778a06f104b6a03093"
     end
   end
 
   resource "man" do
-    url "https://github.com/gypsydave5/pairstair/releases/download/v0.3.19/pairstair.1"
+    url "https://github.com/gypsydave5/pairstair/releases/download/v0.4.0/pairstair.1"
     sha256 "98d13e845703952c238e1db3ec14fcd18de7f4acecbff982665bdaf6853f3184"
   end
 
