@@ -1,34 +1,34 @@
 class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
-  version "0.5.1"
+  version "0.6.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.5.1/pairstair-darwin-arm64"
-      sha256 "a74e20883af76b693ff08c8ed49bf4ecc0ae89445980cf08f26e5841d616d347"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.6.0/pairstair-darwin-arm64"
+      sha256 "71c05e1892f732271c25d00a48f6bdfdd7f7bf12d3b47efcb1a21aeacf9f084d"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.5.1/pairstair-darwin-amd64"
-      sha256 "18fffb66f19bbf7140df365a00e82512500f3a469bed4f8bd68ddcc23f562388"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.6.0/pairstair-darwin-amd64"
+      sha256 "3dcf9ea6090711ed51123661aa4dd6382ca85fe26591824d4cb6387c944aca74"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.5.1/pairstair-linux-arm64"
-      sha256 "ae7897bee1c99c40f64b0eee94ce84a49c4b8935de801f49d42aff72fc460d2d"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.6.0/pairstair-linux-arm64"
+      sha256 "52ebf9c48b5a3d7d8634d8d05b390ed05840515f607793ba3f2c07c4824e4b1f"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.5.1/pairstair-linux-amd64"
-      sha256 "c2213e757e931d3b47c2a5ca2e8630b2ae6eeea7a249f64a86e6bd2d63d35d15"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.6.0/pairstair-linux-amd64"
+      sha256 "32dc659cffed25257dbdfdc0a1bc57e6a64f7a1bc400887798dce1e9bcd3c7ba"
     end
   end
 
   resource "man" do
-    url "https://github.com/gypsydave5/pairstair/releases/download/v0.5.1/pairstair.1"
+    url "https://github.com/gypsydave5/pairstair/releases/download/v0.6.0/pairstair.1"
     sha256 "4fa16ec50f6382ff70c2a234f614201c00d06fecc30e888b114d59733cd51abd"
   end
 
