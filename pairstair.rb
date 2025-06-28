@@ -1,34 +1,34 @@
 class Pairstair < Formula
   desc "Pairing matrix generator"
   homepage "https://github.com/gypsydave5/pairstair"
-  version "0.7.2"
+  version "0.7.3"
 
   on_macos do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.2/pairstair-darwin-arm64"
-      sha256 "124af3eecf5cb076c74f8e8662552f74520216740dbc734583d4be0e1c2ef8f8"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.3/pairstair-darwin-arm64"
+      sha256 "83b96fb684a563142e3abea3f1a2db3eb75eb0bd103d56ecfc7464b0f4e1afa6"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.2/pairstair-darwin-amd64"
-      sha256 "6acb98ea36e367ffdf3cd0aaed496ed72b893652c3cb37c65a6b1b8bb451fa9b"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.3/pairstair-darwin-amd64"
+      sha256 "bdb7d682c1b25c0257df6e3bbf8892638f8c4f805c7fde74fb265309aa9066fc"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.2/pairstair-linux-arm64"
-      sha256 "a522893221ab0a7e3f7757a0c35f264aadebb0c92541d47ce4fe50bf3708e72f"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.3/pairstair-linux-arm64"
+      sha256 "93ae0af9bd3453ed825cd59bc90d898d125973413c27f1566f8a1442a2bfc5d4"
     end
 
     on_intel do
-      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.2/pairstair-linux-amd64"
-      sha256 "ca099e35cc260a596da29b71298ee4228ec91f9dc96578f556a4df4a0d856a59"
+      url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.3/pairstair-linux-amd64"
+      sha256 "3ecba0e421e9838f50119d69619764bbc2db41bf766f2bcefaa924a8275d1a0d"
     end
   end
 
   resource "man" do
-    url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.2/pairstair.1"
+    url "https://github.com/gypsydave5/pairstair/releases/download/v0.7.3/pairstair.1"
     sha256 "d58c5372fe0fb332138991145ecd53b99f406fb6cd67475db03b90e8c43aa1b8"
   end
 
